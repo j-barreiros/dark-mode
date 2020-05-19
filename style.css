@@ -1,0 +1,63 @@
+:root {
+    /* Light Mode */
+    --lBackground: #f6f5f5;
+    --lBoxBackground: #e3e3e3;
+    --lTextColor: #0f1021;
+    --lBtnColor: #303841;
+
+    /* Dark Mode */
+    --dBackground: #232931;
+    --dBoxBackground: #393e46;
+    --dTextColor: #eeeeee;
+    --dBtnColor: #4ecca3;
+
+    /* Initial Mode */
+    --background: var(--lBackground);
+    --boxBackground: var(--lBoxBackground);
+    --textColor: var(--lTextColor);
+    --btnColor: var(--lBtnColor);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background);
+    transition: background-color 1s;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    min-width: 470px;
+    text-align: center;
+    background: var(--boxBackground);
+    font-family: Helvetica;
+    color: var(--textColor);
+    transition: background-color 1s, color 1s;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.box h1,p {
+    margin-bottom: 10px;
+}
+
+#modeSwitch {
+    width: 20%;
+    padding: 10px;
+    color: var(--btnColor);
+    font-weight: bold;
+    border: solid 2px var(--btnColor);
+    cursor: pointer;
+    transition: color 1s, border 1s;
+}
